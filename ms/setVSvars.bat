@@ -166,7 +166,8 @@ exit /b
 :set_WKITS10VER
 	if not "%_WKITS10VER%"=="" goto :eof
 	call:setRegVar "HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SDKs\Windows\v10.0" ProductVersion _WKITS10VER
-	set _WKITS10VER=%_WKITS10VER%.0
+	set _WKITS10VER=%_WKITS10VER%
+	echo "_WKITS10VER:"%_WKITS10VER%
 	echo %_WKITS10VER%
 	if not "%_WKITS10VER%"=="" goto :eof
 	goto :eof
